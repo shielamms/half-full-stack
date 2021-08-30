@@ -38,8 +38,8 @@ Suppose you want to write a program to get the text contents of the `<a>` tag fr
 This whole traversal of the HTML tree is abstracted for us by BeautifulSoup, so you'll only need to tell it roughly **where to look**, and **what data you want to extract**. If we were to use `BeautifulSoup` to do the traversal above, and suppose the html code is stored in a variable called `html_content`, it would be as simple as the following two lines of code:
 
 {% highlight python %}
-    soup = BeautifulSoup(html_content)
-    text = soup.select_one('#div_B a').text
+soup = BeautifulSoup(html_content)
+text = soup.select_one('#div_B a').text
 {% endhighlight %}
 
 In this case, `.select_one('#div_B a')` tells `BeautifulSoup` to look for the `<a>` tag within `#div_B` (*where to look*), and `.text` tells it to extract that text within the tag (*what data you want to extract*).
@@ -50,7 +50,9 @@ Let's take a look at a simple scraping project to understand this better. In thi
 ## Scraping Project
 ### Installation
 For this project, we'll install two libraries: `bs4` and `requests`.
-`pip install bs4 requests`
+```
+pip install bs4 requests
+```
 
 ### Analysing the website
 Null
