@@ -28,6 +28,7 @@ github_username:  shielamms
 
 # Build settings
 theme: minima
+
 plugins:
   - jekyll-feed
 
