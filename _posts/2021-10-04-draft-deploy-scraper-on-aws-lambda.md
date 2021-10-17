@@ -2,8 +2,8 @@
 layout: post
 title: Quickly deploy a scheduled scraper on AWS with Serverless
 date:   2021-08-29 22:44:38 +0100
-categories: data-collection ops
-tags: python aws serverless
+categories: [data collection, ops]
+tags: [python, aws, serverless]
 ---
 <img src="{{site.baseurl}}/assets/images/sample.jpg">
 
@@ -146,6 +146,7 @@ The complete `imdb_scraper.py` is found **here**.
 
 To deploy the function to AWS via Serverless, we only need a YAML file where we can declare the provider, the function, and its associated resources.
 
+### __Declaring the service__
 I've created a file named `serverless.yml` in the same directory as the Python file. We declare the service name at the beginning of **`serverless.yml`**. I also wanted to add the bucket name as a custom variable which can be referenced multiple times in the rest of the configuration later.
 
 ```yml
