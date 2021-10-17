@@ -28,10 +28,12 @@ github_username:  shielamms
 
 # Build settings
 # theme: minima
-theme: jekyll-theme-hydejack
+# theme: jekyll-theme-hydejack
+remote_theme: hydecorp/hydejack@v9.1.4
 
 plugins:
   - jekyll-feed
+  # - jekyll-include-cache
 
 menu:
   - title: Posts
