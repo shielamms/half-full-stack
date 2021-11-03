@@ -47,11 +47,11 @@ collections:
 
 menu:
   - title: Data Ops
-    url: /DataOps/
+    url: /dataops/
   - title: Notebooks
     url: /notebooks/
   - title: NLP
-    url: /NLP/
+    url: /nlp/
   - title: About
     url: /about/
 
