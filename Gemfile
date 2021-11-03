@@ -13,6 +13,7 @@ gem "jekyll", "~> 4.2.0"
 # gem "minima", "~> 2.5"
 gem "jekyll-feed", "~> 0.15"
 gem "jekyll-theme-hydejack"
+gem "jekyll-avatar"
 
 # gem "github-pages", group: :jekyll_plugins
 # gem "jekyll-include-cache", group: :jekyll_plugins
