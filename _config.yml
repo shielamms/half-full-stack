@@ -23,14 +23,14 @@ title: Stack Half Full
 description: >- # this means to ignore newlines until "baseurl:"
   Code optimistically.
   Your skills are half-stack full.
-baseurl: "/stack-half-full" # the subpath of your site, e.g. /blog
+#baseurl: "/stack-half-full" # the subpath of your site, e.g. /blog
 url: "https://shielamms.github.io/stack-half-full/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  shielamms
 
 # Build settings
 # theme: minima
-# theme: jekyll-theme-hydejack
-remote_theme: hydecorp/hydejack@v9.1.4
+theme: jekyll-theme-hydejack
+#remote_theme: hydecorp/hydejack@v9.1.4
 
 plugins:
   - jekyll-feed
