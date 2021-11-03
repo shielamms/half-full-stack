@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -21,7 +21,8 @@
 title: Stack Half Full
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Code optimistically. Be a stack-half-full kind of person.
+  Code optimistically.
+  Your skills are half-stack full.
 baseurl: "/stack-half-full" # the subpath of your site, e.g. /blog
 url: "https://shielamms.github.io/stack-half-full/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  shielamms
@@ -33,11 +34,36 @@ remote_theme: hydecorp/hydejack@v9.1.4
 
 plugins:
   - jekyll-feed
+  - jekyll-avatar
   # - jekyll-include-cache
 
+collections:
+  featured_categories:
+    permalink:         /:name/
+    output:            true
+  featured_tags:
+    permalink:         /tag-:name/
+    output:            true
+
 menu:
-  - title: Posts
-    url:   /blog/
+  - title: Data Ops
+    url: /DataOps/
+  - title: Notebooks
+    url: /notebooks/
+  - title: NLP
+    url: /NLP/
+  - title: About
+    url: /about/
+
+author:
+  picture:  /assets/images/author3.jpg
+  about: |
+    I'm a Data Engineer at [BridgeU](https://bridge-u.com),
+    an ed-tech company that helps students find international undergraduate opportunities.
+    I have dabbled in several areas of software development before
+    finding my passion in the wide field of data science. My work currently focuses on data pipelines,
+    cloud infrastructure, and recommendation systems.
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
