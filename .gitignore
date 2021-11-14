@@ -5,3 +5,4 @@ _site
 vendor
 venv
 Gemfile.lock
+assets/.DS_Store
