@@ -1,0 +1,52 @@
+---
+layout: page
+title: 15 Weeks of Data Science
+permalink: /pages/data-project/
+mathjax: true
+---
+{% include mathjax.html %}
+
+I've set up a new goal for my self in the next few months: 15 weeks of reading and building mini data science projects!
+
+Every week, I'm commiting to read about a data science topic and then code a mini-project that I will commit to a Github repository. I will then link that repository to this site and write up a summary of what that mini-project is about. Optionally I could write a whole post about it.
+
+I refer to the broad definition of "data science", but I'll mostly be reading from books I've already bought:
+
+1. Natural Language Processing with Python
+2. Tensorflow AI for Coders
+3. Linear Algebra for Machine Learning
+
+
+_Why weeks? Aren't these things usually 'days'?_ I realised that I had to consider that I have a full-time job, hobbies, social commitments, and vacation plans, so I can't commit to producing something useful everyday. So to be realistic, my outputs would be on a weekly basis to allow my self more flexibility and to avoid turning this project into a stressful rather than an enjoyable experience.
+
+## Additional rules:
+- The accuracy of a model in a mini-project is of little importance. The goal of this project is to understand algorithms and concepts by coding, and not necessarily on optimising code to production level.
+
+- The outputs must have documentation, though not necessarily complete. The purpose of a mini-project must be outlined, and all complicated algorithms or work-arounds must be explained.
+
+---
+
+## **Week 1**:
+- Topic: Matrices and Matrix Operations
+- Areas: linear algebra, neural networks
+- Project: How to find the determinant of a matrix
+
+---
+
+SUM:
+$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
+
+## **Week 2**:
+- Topic: Word Embeddings
+- Areas: natural language processing
+- Project: Analysing Sentiments on Tweets using Word Embeddings
+
+## **Week 3**:
+- Topic: Markov Chains
+- Areas: predictive models, natural language processing
+- Project: Predicting Text with Markov Chains
+
+## **Week 4**:
+- Topic: N-Fold Cross-Validation
+- Areas: predictive models
+- Project: Building N-Fold Cross Validation Function from Scratch

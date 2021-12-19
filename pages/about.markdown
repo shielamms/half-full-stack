@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /pages/about/
 ---
 
 ## Stack Half Full: <br>Not quite Full Stack, but getting there!
