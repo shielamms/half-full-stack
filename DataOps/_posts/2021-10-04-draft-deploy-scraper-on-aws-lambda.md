@@ -22,7 +22,8 @@ I've written a simple Python-based scraper to collect certain information from e
 ---
 
 ## Code repository
-Complete code in [this Github repository](https://github.com/shielamms/lambda-functions/tree/master/post-deploy-scraper-to-lambda).
+Complete code in [this Github repository](https://github.com/shielamms/lambda-functions/tree/master/01-serverless-scraper).
+
 
 ---
 
@@ -86,7 +87,7 @@ def scrape(self):
     response = requests.get(self._start_url)
     self._soup = BeautifulSoup(response.content)
     movies = self._soup.select('.movies li')
-    
+
     for movie in movies:
         # get details
         title = movie.select_one('.titleColumn > a').text
@@ -98,7 +99,7 @@ def scrape(self):
             'url': url,
             'rating': rating,
         })
-    
+
     return self._output
 ```
 
