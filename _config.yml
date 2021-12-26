@@ -21,22 +21,22 @@
 title: Stack Half Full
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Code optimistically.
-  Your skills are half-stack full.
+  Optimistically learning data science
 baseurl: "/stack-half-full" # the subpath of your site, e.g. /blog
 url: "https://shielamms.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  shielamms
 
 # Build settings
 # theme: minima
-#theme: jekyll-theme-hydejack
-remote_theme: hydecorp/hydejack@v9.1.4
+# theme: jekyll-theme-hydejack  # comment out when on local
+remote_theme: hydecorp/hydejack@v9.1.4  # uncomment when on github pages
 
 plugins:
   - jekyll-feed
   - jekyll-avatar
   # - jekyll-include-cache
 
+permalink: /:categories/:slug:output_ext
 collections:
   featured_categories:
     permalink:         /:name/
@@ -48,21 +48,29 @@ collections:
 menu:
   - title: Data Ops
     url: /dataops/
-  - title: Notebooks
-    url: /notebooks/
   - title: NLP
     url: /nlp/
+  - title: Mathematics
+    url: /maths/
+  - title: Notebooks
+    url: /notebooks/
+  - title: 15WDS
+    url: /data-project/
   - title: About
     url: /about/
+
+kramdown:
+  math_engine:         mathjax
+  math_engine_opts:    {}
 
 author:
   picture:  /assets/images/author3.jpg
   about: |
-    I'm a Data Engineer at [BridgeU](https://bridge-u.com),
-    an ed-tech company that helps students find international undergraduate opportunities.
-    I have dabbled in several areas of software development before
-    finding my passion in the wide field of data science. My work currently focuses on data pipelines,
-    cloud infrastructure, and recommendation systems.
+    I'm a Data Engineer at [BridgeU](https://bridge-u.com), where my work focuses on data pipelines,
+    cloud infrastructure, and recommendation systems. On the side, I'm learning data science through
+    mini projects and online tutorials. I'm no full-stack data scientist, but I'd like to think that
+    my stack is half-full and I'm constantly learning new things.
+
 
 
 # Exclude from processing.
