@@ -36,6 +36,10 @@ plugins:
   - jekyll-avatar
   # - jekyll-include-cache
 
+font:         Noto Sans, Helvetica, Arial, sans-serif
+font_heading: Roboto Slab, Helvetica, Arial, sans-serif
+google_fonts: Roboto+Slab:700|Noto+Sans:400,400i,700,700i
+
 permalink: /:categories/:slug:output_ext
 collections:
   featured_categories:
