@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Matrices and Matrix Operations
+slug: matrix-operations
 date:   2021-12-04 13:00:00 +0000
 categories: [Maths]
 tags: [linear-algebra,python,numpy]
@@ -414,6 +415,8 @@ Output:
 
 ### 3. Trace
 The trace is the sum of the values in the main diagonal of a square matrix.
+The main diagonal of a matrix is the set of elements that form a diagonal
+from the top left of the matrix to the bottom right.
 
 **Notation**:  $$tr(A)$$
 
@@ -449,7 +452,7 @@ Output:
 ```
 
 ### 4. Determinant
-The determinant is the scalar representation of the volume of the matrix. It is the product of all the eigenvalues of the matrix. In other words, it describes the way the matrix will scale another matrix when they are multiplied together.
+The determinant is the scalar representation of the volume of the matrix. In other words, it describes the way the matrix will scale another matrix when they are multiplied together.
 
 A zero determinant means that the matrix is not invertible.
 
@@ -470,3 +473,13 @@ Output:
 
 -9.51619735392994e-16
 ```
+
+<br>
+
+---
+
+## References and Further Reading:
+
+- [Brownlee, Jason (2021). "Basics of Linear Algebra for Machine Learning", Vectors and Matrices](https://machinelearningmastery.com/linear_algebra_for_machine_learning/)
+
+- [Jones, James. "The Inverse of a Square Matrix", College Algebra Lecture Notes (Richland Community College)](https://people.richland.edu/james/lecture/m116/matrices/inverses.html)

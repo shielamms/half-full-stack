@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Notebooks
-permalink: /pages/notebooks/
+permalink: /notebooks/
 ---
 
 For data analysis and machine learning, I normally use **Jupyter Notebooks** or Google Colab if I need more computing power. Here's a bunch of Notebooks I've written while experimenting on intelligent algorithms, data wrangling, and data visualisations.

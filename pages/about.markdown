@@ -1,21 +1,29 @@
 ---
 layout: page
 title: About
-permalink: /pages/about/
+permalink: /about/
 ---
 
-## Stack Half Full: <br>Not quite Full Stack, but getting there!
-I'm a Data Engineer. I deal with data pipelines - data collection, data cleaning, cloud infrastructure, a bit of analytics, a bit of machine learning, optimizations, storage, etc. etc.. I consider my self a **"Stack Half-full"** data scientist (in place of the term "Half-Stack"). My skillset currently leans towards Data Engineering, but I also enjoy learning new things in the wider field of Data.
+## My Tech Stack is Half-Full.
+Hi! I'm Shiela. My current job title is *Data Engineer*, but I also love learning
+the wider field of Data Science - from maths foundations to neural networks,
+as well as the analytics, algorithms, operations, and infrastructure in between.
+This is my portfolio of personal projects related to data and its intricate web of subjects.
 
-I am currently practicing writing production-ready code as much as possible. In this blog, I aim to share code and insights about the following topics:
-1. Data processing (a wide field in itself)
-2. Deployments and pipelines on Cloud services
-3. Statistical data analysis
-4. Machine Learning algorithms
-5. Miscellaneous data engineering stuff, like data security and compliance
+With this website, I want to learn and share about:
+- Data Ops
+  <br>This is where my current data skillset leans towards. This generally includes
+  data processing on the cloud, APIs, and infrastructure.
+- Natural Language Processing
+  <br>I have a particular fondess for NLP rooted in my general interest in languages.
+  As such, I focus more on text processing than image processing in applied machine learning.
+- Maths Foundations for Data Science
+  <br>I do believe that a data scientist should have strong maths foundations,
+  so I'm trying to improve myself in this front.
+- Machine Learning algorithms and tools
+  <br>There's tons of ML theory articles out there, but I think the best way to really grasp
+  how an ML algorithm/tool works is by working on projects.
 
-### *`Checkout` my code!*
-All the code in this blog can be found in my Github profile.
 
 ---
 #### Shameless Plug...

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Detecting lies from messages in Diplomacy - an evil game of deception
+slug: diplomacy-lie-classifier
 date:   2021-10-31 22:22:00 +0000
 categories: [NLP]
 tags: [python, data-cleaning, tfidf, classifiers, smote]

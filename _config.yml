@@ -36,6 +36,7 @@ plugins:
   - jekyll-avatar
   # - jekyll-include-cache
 
+permalink: /:categories/:slug:output_ext
 collections:
   featured_categories:
     permalink:         /:name/
@@ -52,11 +53,11 @@ menu:
   - title: Mathematics
     url: /maths/
   - title: Notebooks
-    url: /pages/notebooks/
+    url: /notebooks/
   - title: 15WDS
-    url: /pages/data-project/
+    url: /data-project/
   - title: About
-    url: /pages/about/
+    url: /about/
 
 kramdown:
   math_engine:         mathjax
