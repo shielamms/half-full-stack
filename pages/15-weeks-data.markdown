@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 15 Weeks of Data Science
-permalink: /pages/data-project/
+permalink: /data-project/
 mathjax: true
 ---
 {% include mathjax.html %}
