@@ -48,27 +48,53 @@ A game looks like this:
 }
 ```
 
-
 ## The Scope of this Project
 
 So there's loads of things we could possibly build out of this dataset. In this project,
-we'll try to see if we can train a model with a subset of its features in order to predict if a given message is a truth or a despicable lie.
+I attempted to train a model with a subset of its features in order to predict if a given message is a truth or a despicable lie.
 
-I'm starting with a simplistic model first - The only feature I'll use is `messages`, and `sender_labels` will be the label. Simple enough, so I can discard the rest of the data - or reserve it for some other project. If the results don't turn out well, then I'll write a Part 2 of this project for the improvements.
+I've started with a simplistic model first - The only feature I used is `messages`, and `sender_labels` is the label. Simple enough, so I discarded the rest of the data - or reserved it for some other project. I told my self that if the model's performance doesn't turn out well, then I'll write a Part 2 of this project for the improvements (Spoiler alert: it didn't turn out well).
 
 
 ### Lie detection as an NLP problem
-There's a few things to note about this dataset:
+There's a few things to note about this project:
 
-1. The label `sender_labels` has only two values: `true` or `false` (truth or lie). This could imply that each message sent by a player has the intention to either mislead or make a genuine suggestion to another player (so it's either definitely false or definitely true). But in reality, Diplomacy messages can just be neutral messages, like greetings, questions, or just general chatter. So, instead of interpreting `true` or `false` as either truth or lie, we can interpret `true` as truth or neutral, and `false` as not truth. This representation is particularly useful to avoid confusion when we convert `true` to 1 and `false` to 0.
+1. The label `sender_labels` in the dataset has only two values: `true` or `false` (truth or lie). This could imply that each message sent by a player has the intention to either mislead or make a genuine suggestion to another player (so it's either definitely false or definitely true). But in reality, Diplomacy messages can just be neutral messages, like greetings, questions, or just general chatter. So, instead of interpreting `true` or `false` as either truth or lie, we can interpret `true` as truth or neutral, and `false` as not truth. This representation is particularly useful to avoid confusion when we convert `true` to 1 and `false` to 0.
 
-2. When playing the game, context is very important for humans to detect lies - E.g., At what point in the game was the message sent? Who sent it? What's the current state of the map? In the current approach of this project, we're not going to consider those yet. We want to know how well the structure of messages in the game at a syntactic level correlates to the intent of the players sending those messages. In other words, is there a certain choice of words that make a Diplomacy message more likely to be a lie?
-
-
-### The Code
-You can download or clone the code repository for this project here: (Github Repo)
+2. When playing the game, context is very important for humans to detect lies - E.g., At what point in the game was the message sent? Who sent it? What's the current state of the map? In the current approach of this project, those are not considered yet. I only want to know how well word frequencies on messages correlate to the intent of the players sending those messages. In other words, is the presence of certain words in a Diplomacy message make that message more likely to be a lie?
 
 ---
+
+## The Code
+You can download or clone the code repository for this project on Github: **[Diplomacy-NLP](https://github.com/shielamms/diplomacy-nlp)**
+
+The code was tested on Python 3.8.8.
+
+- Before running the code, it's recommended to create a virtual environment in your local directory with the specified Python version. You can do this with pyenv, for example:
+```
+pyenv install -v 3.8.8
+pyenv local 3.8.8
+python -m pip install virtualenv
+python -m virtualenv venv
+source venv/bin/activate
+```
+
+- Once your virtual environment is created, install the required libraries by:
+```
+pip install -r requirements.txt
+```
+
+- Run the code:
+```
+python main.py
+```
+
+This program starts with some messages that the model is being trained and validated. After which, it will run in an infinite loop which asks for your text input (which is your own Diplomacy message that you want to test) and then outputs if your message is a truth or a despicable lie. To exit the program, press Ctrl+C on the terminal.
+
+---
+---
+
+# Code Walkthrough
 
 ## Reading the Files
 Reading *.jsonl* files is just the same way as reading any text file through Python.
@@ -177,7 +203,7 @@ After all the messages have been cleaned, we can now feed our tokens into a vect
 
 Recall that the simplistic goal of this project is to determine if the appearance of certain words (or group of words) within a message in a game is a good indicator of whether the whole message is a lie. This roughly translates to the concept of **TF-IDF** (Term Frequency-Inverse Document Frequency), which is a statistical measure of the relevance of a word within a document among a collection of documents (in this case, a document is a message). As a rough example of its consequence, if the words "attack" and "follow" appear more often in messages which are lies, then given a new message which contains both words (irrelevant of its context), then that new message has a higher probability of being a lie.
 
-Scikit-learn's `TfidfVectorizer` represents each token from the messages as a TF-IDF score, which is the relevance score of that token in relation to other tokens in our corpus.
+Scikit-learn's `TfidfVectorizer` represents each token from the messages as a TF-IDF score, which is a numeric score of that token in relation to other tokens in our corpus.
 
 ```python
 # file: "vectorizer.py"
@@ -197,7 +223,7 @@ def _create_vectorizer(self):
     return vectorizer
 ```
 
-Note here that we can pass the `tokenize_and_remove_stopwords()` function that we wrote earlier to the `tokenizer` parameter of `TfidfVectorizer`. This means that the output tokens of the tokenizer function is the input of the instatiated vectorizer.
+Note here that we can pass the `tokenize_and_remove_stopwords()` function that we wrote earlier to the `tokenizer` parameter of `TfidfVectorizer`. This means that the output of the tokenizer function is the input of the instatiated vectorizer.
 
 ### Transforming the training data... and finding an *oopsie*
 One last step before we can train a prediction model with the training data - we need to fit the message data into our vectorizer. While I was doing this, I found my self in a "facepalm" moment when I realised I haven't looked at the proportion of lies within the training dataset.
@@ -284,7 +310,7 @@ class DiplomacyMessageClassifier:
         return self.predictions
 ```
 
-To be able to compare this to other models in the future, I've set the `CLASSIFIERS` variable above as a dictionary of classification models. We can then create multiple instances of `DiplomacyMessageClassifier` with different underlying classifiers. We pass the vectorized training features (`X_train`) and the expected labels (`y_train`) to the classifier's `train()` function.
+To be able to compare this to other models in the future, I've set the `CLASSIFIERS` variable above as a dictionary of classification models. We can then create multiple instances of `DiplomacyMessageClassifier` with different underlying classifiers. We pass the vectorized training features `X_train` and the expected labels `y_train` to the classifier's `train()` function.
 
 ```python
 import classifier as clf
@@ -295,7 +321,7 @@ classifier.train(X_train, y_train)
 
 ## Validation and Evaluation
 Recall that we have three files: *train.jsonl*, *validation.jsonl*, and *test.jsonl*.
-For the validation and testing, we just do the same pre-processing (data cleaning) steps above, vectorize the messages, and skip the oversampling step. We then pass the vectorized messages of the validation set to the classifier's `predict()` function, which returns either 1 (truth) or 0 (lie).
+For the validation and testing, we just do the same pre-processing (data cleaning) steps above, vectorize the messages, and skip the oversampling step, which is only needed in training. We then pass the vectorized messages of the validation set to the classifier's `predict()` function, which returns either 1 (truth) or 0 (lie).
 
 ```python
 # file: "main.py"
@@ -353,9 +379,8 @@ evaluate(validation_df['messages'],
 ```
 
 ## The results...
-The whole code can be found in this Git repository: ____
 
-To interpret the results of the classification report, we can first clarify what true positives, false positives, true negatives, and false positives are in this context.
+To interpret the results of the classification report, it might be useful to first clarify what true positives, false positives, true negatives, and false positives are in this context.
 
 **True Positives (TP)**: the number of actual true messages that we predicted as true.
 
@@ -365,7 +390,7 @@ To interpret the results of the classification report, we can first clarify what
 
 **False Negatives (FN)**: the number of actual true messages that we predicted as false, i.e, we were overly mistrusting over a message.
 
-When playing the game, it usually weighs more to a player (it *hurts* a lot more) if they believed a lie than if they mistrusted a genuine message. This means that while False Negatives may mean wasted opportunity to be friends with another player, we value False Positives more in our predictions, thus, our aim is to minimize those False Positives.
+When playing the game, it usually weighs more to a player (it *hurts* a lot more) if they believed a lie than if they mistrusted a genuine message. This means that while False Negatives may mean wasted opportunity to be friends with another player, we value False Positives more in our predictions because we don't like believing in lies. Thus, our aim is to minimize those False Positives.
 
 With those definitions out of the way, let's take a look at the classification report on our validation set:
 
@@ -424,4 +449,5 @@ Classification Report:
 weighted avg       0.86      0.62      0.70      2741
 ```
 
-
+## Conclusion and Ideas for Improvement
+So the first model's performance isn't so great, and it doesn't do any better than human players guessing if a message they receive in the game is a lie. But it's a good start, I think, to practicing data pre-processing to get a better look at the data and think of ways to derive intention. So far, we've only relied on word frequencies and inverse document frequencies to weigh the relevance of certain words in our corpus. In Part 2 of this project (coming soon), we'll take a look into the use of Embeddings, which brings us closer to the meaning of words within sentences, and hopefully help us better detect lies in this friendship-destroying game of deception.

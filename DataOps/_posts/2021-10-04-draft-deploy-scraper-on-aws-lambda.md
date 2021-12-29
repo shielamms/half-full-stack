@@ -8,7 +8,7 @@ tags: [python, aws, serverless]
 
 Suppose you want to get information from a website regularly and want to do that automatically on the cloud with as little configuration as possible. First, you'll need to write a web scraper (or spider), then have that scraper be run by a scheduler on some cloud provider.
 
-In this project, I've chosen to use Python to write the scraper and AWS as the cloud provider. There are several ways to deploy functions through code, like terraform or ansible. I chose Serverless because it's the quickest to set up and write. Here's how the project looks like in concept:
+In this project, I've chosen to use Python to write the scraper and AWS as the cloud provider. There are several ways to deploy functions through code, like terraform or docker. I chose Serverless because it's the quickest to set up and write. Here's how the project looks like in concept:
 
 <!-- <img src="{{site.baseurl}}/assets/images/serverless-scraper.png"> -->
 ![Full-width image]({{site.baseurl}}/assets/images/serverless-scraper.png){:.lead loading="lazy"}
@@ -21,16 +21,13 @@ I've written a simple Python-based scraper to collect certain information from e
 
 ---
 
-## Code repository
-Complete code in [this Github repository](https://github.com/shielamms/lambda-functions/tree/master/01-serverless-scraper).
+## The Code
+You can checkout the complete code in [this Github repository](https://github.com/shielamms/lambda-functions/tree/master/01-serverless-scraper).
 
-
----
-
-## Pre-requisites
+### Pre-requisites
 1. Python 3.7 environment
 
-    [Download Python here](https://www.python.org/downloads/release/python-3712/)
+    If you're a Mac user, you would already have a Python 3 interpreter by default (use `python3` command instead of `python`). If your Python version does not match the needed version for this project, you can switch Python versions using an environment manager like Pyenv (`brew install pyenv`) or Anaconda.
 
 2. AWS account and AWS CLI setup
     - to create an AWS account, [refer to this page](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html).
@@ -44,8 +41,9 @@ Complete code in [this Github repository](https://github.com/shielamms/lambda-fu
 <br />
 
 ---
+---
 
-## Code Walkthrough
+# Code Walkthrough
 
 ## 1. The Scraper
 
@@ -297,4 +295,4 @@ def handler(event, args):
 
 
 #### Check out this repository for the complete code:
-[Lambda Functions](https://github.com/shielamms/lambda-functions/tree/master/post-deploy-scraper-to-lambda).
+[Lambda Functions](https://github.com/shielamms/lambda-functions/tree/master/01-serverless-scraper).
