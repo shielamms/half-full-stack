@@ -50,16 +50,16 @@ collections:
     output:            true
 
 menu:
-  - title: Data Ops
-    url: /dataops/
   - title: NLP
     url: /nlp/
+  - title: Data Ops
+    url: /dataops/
   - title: Mathematics
     url: /maths/
   - title: Notebooks
     url: /notebooks/
-  - title: 15WDS
-    url: /data-project/
+  # - title: 15WDS
+  #   url: /data-project/
   - title: About
     url: /about/
 
@@ -68,12 +68,11 @@ kramdown:
   math_engine_opts:    {}
 
 author:
-  picture:  /assets/images/author3.jpg
+  picture:  /assets/images/author.jpg
   about: |
     I'm a Data Engineer at [BridgeU](https://bridge-u.com), where my work focuses on data pipelines,
     cloud infrastructure, and recommendation systems. On the side, I'm learning data science through
-    mini projects and online tutorials. I'm no full-stack data scientist, but I'd like to think that
-    my stack is half-full and I'm constantly learning new things.
+    mini projects and online tutorials. Also on the side are a wide variety of hobbies and interests.
 
 
 

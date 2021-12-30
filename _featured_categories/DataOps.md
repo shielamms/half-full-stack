@@ -1,9 +1,14 @@
 ---
-layout: list
+layout: page
 title: DataOps
 slug: DataOps
 description: >
-  DataOps consists of infrastructure, data pipelines,  application deployments (especially on cloud providers), and APIs
+  This is where my current data skillset leans towards. This generally includes infrastructure, data pipelines,  application deployments (especially on cloud providers), and APIs
 menu: true
 no_groups: true
 ---
+
+**Projects**
+- [Serverless Web Scraper on AWS Lambda](/stack-half-full/DataOps/serverless-web-scraper-on-aws-lambda.html) - ([Code on Github](https://github.com/shielamms/lambda-functions/tree/master/01-serverless-scraper){:target="_blank"})
+
+- [Bulk Import DNS records to Route53 with AWS Lambda](/stack-half-full/DataOps/bulk-import-dns-records-route53-lambda.html) - ([Code on Github](https://github.com/shielamms/lambda-functions/tree/master/02-route53-bulk-import){:target="_blank"})

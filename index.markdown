@@ -4,3 +4,5 @@
 
 layout: home
 ---
+
+# It's not Full Stack. It's Half-Full.
