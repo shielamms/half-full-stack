@@ -11,13 +11,13 @@ tags: [python, data-cleaning, tfidf, classifiers, smote]
 
 Working at a remote-first company, my colleagues and I had to find some fun team-building activities that we could do online. Playing Diplomacy was **not** one of them.
 
-[Diplomacy](https://www.backstabbr.com) is a board game of 7 players representing 7 nations at war in the early 20th century: Turkey, Russia, Austria, Italy, Germany, France, and England. To win the game, one must take over 18 "supply centres" (cities) in the map of Europe, by engaging in private "diplomatic" conversations with each other. You can pretty much say anything you want - offer your allegiance, promise to be neutral, suggest a win-win deal, promise to support an attack - and then choose to do the exact opposite. So now you know how the game can spark severe cases of backstabbing, bitterness, and outrage - the perfect workplace situtation, right?
+[Diplomacy](https://www.backstabbr.com){:target="_blank"} is a board game of 7 players representing 7 nations at war in the early 20th century: Turkey, Russia, Austria, Italy, Germany, France, and England. To win the game, one must take over 18 "supply centres" (cities) in the map of Europe, by engaging in private "diplomatic" conversations with each other. You can pretty much say anything you want - offer your allegiance, promise to be neutral, suggest a win-win deal, promise to support an attack - and then choose to do the exact opposite. So now you know how the game can spark severe cases of backstabbing, bitterness, and outrage - the perfect workplace situtation, right?
 
 ## Treasure Dataset found!
 So in my spare time contemplating about the most recent backstabbing that I've experienced in the game, I found an interesting and very timely dataset online: a collection of Diplomacy games and conversations! _Perfect, just perfect_, I thought to my self with an evil grin on my face.
 
 You can find the dataset here:
-[Diplomacy: A Dataset for Deception Detection](https://sites.google.com/view/qanta/projects/diplomacy)
+[Diplomacy: A Dataset for Deception Detection](https://sites.google.com/view/qanta/projects/diplomacy){:target="_blank"}
 
 ### Data Format
 The link above gives us three files - *train.jsonl*, *validate.jsonl*, and *test.jsonl*. Each file contains a bunch of JSON strings, each representing an entire game dialog. You can check the data source link above for the meta-info about each feature in the dataset. Note that each game has an array of `messages` and a corresponding array of `sender_labels` (whether the sender of the message is lying or not) as well as of `receiver_labels` (whether the receiver thought the message was a lie or not).
@@ -66,12 +66,12 @@ There's a few things to note about this project:
 ---
 
 ## The Code
-You can download or clone the code repository for this project on Github: **[Diplomacy-NLP](https://github.com/shielamms/diplomacy-nlp)**
+You can download or clone the code repository for this project on Github: **[Diplomacy-NLP](https://github.com/shielamms/diplomacy-nlp){:target="_blank"}**
 
 The code was tested on Python 3.8.8.
 
 - Before running the code, it's recommended to create a virtual environment in your local directory with the specified Python version. You can do this with pyenv, for example:
-```
+```bash
 pyenv install -v 3.8.8
 pyenv local 3.8.8
 python -m pip install virtualenv
@@ -80,16 +80,43 @@ source venv/bin/activate
 ```
 
 - Once your virtual environment is created, install the required libraries by:
-```
+```bash
 pip install -r requirements.txt
 ```
 
 - Run the code:
-```
+```bash
 python main.py
 ```
 
-This program starts with some messages that the model is being trained and validated. After which, it will run in an infinite loop which asks for your text input (which is your own Diplomacy message that you want to test) and then outputs if your message is a truth or a despicable lie. To exit the program, press Ctrl+C on the terminal.
+The program starts with some console messages saying that the model is being trained and validated. After which, it will run in an infinite loop which will ask for your text input (which is your own Diplomacy message that you want to test) and then it will say if your message is a truth or a despicable lie. To exit the program, press Ctrl+C on the terminal.
+
+Here's a sample run on the console:
+
+```
+-- DiplomacyGamesReader init --
+-- DiplomacyMessageVectorizer init --
+-- DiplomacyMessageClassifier init --
+Training in progress...
+Validation Results: (model: SVC)
+Classification Report: ...
+
+Test Results: (model: SVC)
+Classification Report: ...
+
+Your test message:
+I was talking with Russia, negotiating over Norway and such. They told me they were planning on attacking you, as they thought I was there ally. Just decided to let you know.
+
+The AI thinks...
+That is a despicable lie!
+
+
+Your test message:
+France will cross the English Channel next round. You have to take over their SCs now!
+
+The AI thinks...
+That is a truth!
+```
 
 ---
 ---

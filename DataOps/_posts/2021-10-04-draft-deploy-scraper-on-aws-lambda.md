@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Serverless web scraper on AWS Lambda
+slug: serverless-web-scraper-on-aws-lambda
 date:   2021-08-29 22:44:38 +0100
 categories: [DataOps]
 tags: [python, aws, serverless]
@@ -15,14 +16,14 @@ In this project, I've chosen to use Python to write the scraper and AWS as the c
 <!-- Caption
 {:.figcaption} -->
 
-The webpage I chose to scrape is this [**IMDB page containing a list of movies**](https://www.imdb.com/chart/moviemeter/?ref_=nv_mv_mpm).
+The webpage I chose to scrape is this [**IMDB page containing a list of movies**](https://www.imdb.com/chart/moviemeter/?ref_=nv_mv_mpm){:target="_blank"}.
 
 I've written a simple Python-based scraper to collect certain information from each movie on the list. The Serverless configuration file specifies the resources that need to be created in AWS for the scraper to work. The Lambda function will run every midnight of the first day of each month through an EventBridge schedule, and upload the scraped data as JSON into an S3 bucket.
 
 ---
 
 ## The Code
-You can checkout the complete code in [this Github repository](https://github.com/shielamms/lambda-functions/tree/master/01-serverless-scraper).
+You can checkout the complete code in [this Github repository](https://github.com/shielamms/lambda-functions/tree/master/01-serverless-scraper){:target="_blank"}.
 
 ### Pre-requisites
 1. Python 3.7 environment
@@ -30,12 +31,12 @@ You can checkout the complete code in [this Github repository](https://github.co
     If you're a Mac user, you would already have a Python 3 interpreter by default (use `python3` command instead of `python`). If your Python version does not match the needed version for this project, you can switch Python versions using an environment manager like Pyenv (`brew install pyenv`) or Anaconda.
 
 2. AWS account and AWS CLI setup
-    - to create an AWS account, [refer to this page](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html).
-    - to set up AWS CLI on your machine, [refer to this page](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+    - to create an AWS account, [refer to this page](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html){:target="_blank"}.
+    - to set up AWS CLI on your machine, [refer to this page](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html){:target="_blank"}
 
 3. Serverless
 
-    The quickest way to install Serverless is through `npm`. [Installation steps here](https://www.serverless.com/framework/docs/getting-started).
+    The quickest way to install Serverless is through `npm`. [Installation steps here](https://www.serverless.com/framework/docs/getting-started){:target="_blank"}.
 
 
 <br />
@@ -128,7 +129,7 @@ def handler(event, args):
 
 The handler function needs `event` and `args` parameters, as required by AWS Lambda. `event` contains the parameters that the function trigger (in this case, the trigger is EventBridge) passes to the function. The EventBridge trigger contains a `bucket_name` parameter (which is defined in Serverless, see section below).
 
-The complete `imdb_scraper.py` is found [**here**](https://github.com/shielamms/lambda-functions/blob/master/post-deploy-scraper-to-lambda/imdb_scraper.py).
+The complete `imdb_scraper.py` is found [**here**](https://github.com/shielamms/lambda-functions/blob/master/post-deploy-scraper-to-lambda/imdb_scraper.py){:target="_blank"}.
 
 <br />
 
@@ -218,7 +219,7 @@ In addition, if you want Lambda logs and metrics to be sent to CloudWatch, you c
 ```
 
 #### 2.3: __Declaring the Lambda Function__
-The Lambda Function is declared inside the `functions` attribute. Here we can specify Lambda function settings like the handler, runtime, and timeout values. Refer to the [Serverless documentation](https://www.serverless.com/framework/docs/providers/aws/guide/functions) for more attribute details.
+The Lambda Function is declared inside the `functions` attribute. Here we can specify Lambda function settings like the handler, runtime, and timeout values. Refer to the [Serverless documentation](https://www.serverless.com/framework/docs/providers/aws/guide/functions){:target="_blank"} for more attribute details.
 
 ```yml
 # file: "serverless.yml"
@@ -295,4 +296,4 @@ def handler(event, args):
 
 
 #### Check out this repository for the complete code:
-[Lambda Functions](https://github.com/shielamms/lambda-functions/tree/master/01-serverless-scraper).
+[Lambda Functions](https://github.com/shielamms/lambda-functions/tree/master/01-serverless-scraper){:target="_blank"}.
