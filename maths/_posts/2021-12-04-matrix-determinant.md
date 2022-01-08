@@ -19,7 +19,7 @@ For a 2x2 matrix, the determinant is simply the difference between the product o
 The determinant is $$(1\times4) - (2\times3) = -2$$.
 
 ### 3x3 matrix
-For a 3x3 matrix, we introduce the concept of *minors*. A *minor* of a matrix is a square matrix that that is derived from excluding a row and column of the original matrix. For example, given this 3x3 matrix:
+For a 3x3 matrix, we introduce the concept of *minors*. A *minor* of a matrix is a square matrix that is derived from excluding a row and column of the original matrix. For example, given this 3x3 matrix:
 ```
 [[1 2 3]
  [4 5 6]
@@ -148,7 +148,15 @@ print('Determinant: ', get_determinant(A))
 
 ```
 
-The output of the function given the matrix `A` is -99. It's a bit tedious to verify this by hand, but you can use an online tool like [this one](https://www.wolframalpha.com/calculators/determinant-calculator) and compare the results.
+The output of the function given the matrix `A` is -99. It's a bit tedious to verify this by hand, but you can use the `numpy.linalg` library and compare the results:
+
+```python
+from numpy import array
+from numpy.linalg import det
+
+A = array([[1,2,3,4],[4,3,5,6],[8,4,2,1],[3,2,4,1]])
+print(det(A))
+```
 
 ---
 

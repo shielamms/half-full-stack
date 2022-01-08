@@ -454,7 +454,7 @@ Output:
 ### 4. Determinant
 The determinant is the scalar representation of the volume of the matrix. In other words, it describes the way the matrix will scale another matrix when they are multiplied together.
 
-A zero determinant means that the matrix is not invertible.
+A zero determinant means that the matrix is not invertible, or that an inverse of the matrix does not exist.
 
 ```python
 from numpy.linalg import det
@@ -473,6 +473,8 @@ Output:
 
 -9.51619735392994e-16
 ```
+
+One of the ways to calculate the determinant of a matrix is by the Laplace Expansion algorithm, which is discussed in [my mini project here](/stack-half-full/maths/matrix-determinant-with-laplace-expansion).
 
 <br>
 

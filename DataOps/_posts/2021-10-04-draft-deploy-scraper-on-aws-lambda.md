@@ -3,13 +3,13 @@ layout: post
 title: A Serverless web scraper on AWS Lambda
 slug: serverless-web-scraper-on-aws-lambda
 date:   2021-08-29 22:44:38 +0100
-categories: [DataOps]
+categories: [dataops]
 tags: [python, aws, serverless]
 ---
 
 Suppose you want to get information from a website regularly and want to do that automatically on the cloud with as little configuration as possible. First, you'll need to write a web scraper (or spider), then have that scraper be run by a scheduler on some cloud provider.
 
-In this project, I've chosen to use Python to write the scraper and AWS as the cloud provider. There are several ways to deploy functions through code, like terraform or docker. I chose Serverless because it's the quickest to set up and write. Here's how the project looks like in concept:
+In this project, I've chosen to use Python to write the scraper and AWS as the cloud provider. There are several ways to deploy functions through code, like terraform or docker. I chose Serverless because it's the quickest to set up and write (in my opinion). Here's how the project looks like in concept:
 
 <!-- <img src="{{site.baseurl}}/assets/images/serverless-scraper.png"> -->
 ![Full-width image]({{site.baseurl}}/assets/images/serverless-scraper.png){:.lead loading="lazy"}
@@ -53,8 +53,8 @@ You can checkout the complete code in [this Github repository](https://github.co
 This library is often used hand-in-hand with the `requests` library.
 ```python
 # file: "imdb_scraper.py"
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
 ```
 
 To use `BeautifulSoup` with `requests`, we do something like this:

@@ -61,7 +61,7 @@ There's a few things to note about this project:
 
 1. The label `sender_labels` in the dataset has only two values: `true` or `false` (truth or lie). This could imply that each message sent by a player has the intention to either mislead or make a genuine suggestion to another player (so it's either definitely false or definitely true). But in reality, Diplomacy messages can just be neutral messages, like greetings, questions, or just general chatter. So, instead of interpreting `true` or `false` as either truth or lie, we can interpret `true` as truth or neutral, and `false` as not truth. This representation is particularly useful to avoid confusion when we convert `true` to 1 and `false` to 0.
 
-2. When playing the game, context is very important for humans to detect lies - E.g., At what point in the game was the message sent? Who sent it? What's the current state of the map? In the current approach of this project, those are not considered yet. I only want to know how well word frequencies on messages correlate to the intent of the players sending those messages. In other words, is the presence of certain words in a Diplomacy message make that message more likely to be a lie?
+2. When playing the game, context is very important for humans to detect lies - E.g., At what point in the game was the message sent? Who sent it? What's the current state of the map? In the current approach of this project, those are not considered yet. I only want to know how well word frequencies on messages correlate to the intent of the players sending those messages. In other words, does the presence of certain words in a Diplomacy message make that message more likely to be a lie?
 
 ---
 

@@ -12,3 +12,5 @@ no_groups: true
 
 **Projects**
 - [Detecting lies from messages in Diplomacy](/stack-half-full/nlp/diplomacy-lie-classifier.html) - ([Code on Github](https://github.com/shielamms/diplomacy-nlp){:target="_blank"})
+
+- [Matching names through the Levenshtein Distance](/stack-half-full/nlp/levenshtein-distance.html) - ([Code on Github](https://github.com/shielamms/nlp/tree/main/01-levenshtein_distance){:target="_blank"})
