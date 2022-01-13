@@ -8,7 +8,7 @@ tags: [linear-algebra,python]
 mathjax: true
 ---
 
-In the [Matrix Operations](/stack-half-full/maths/matrix-operations) article, getting the determinant of a matrix through Python code could be as simple as importing `numpy.linalg.det`. This project is a simple implementation of that calculation through an algorithm called the **Laplace Expansion**. To understand the algorithm, let's first take a look at a simple matrix.
+In the [Matrix Operations]({{ "/maths/matrix-operations" | relative_url }}) article, getting the determinant of a matrix through Python code could be as simple as importing `numpy.linalg.det`. This project is a simple implementation of that calculation through an algorithm called the **Laplace Expansion**. To understand the algorithm, let's first take a look at a simple matrix.
 
 ### 2x2 matrix
 For a 2x2 matrix, the determinant is simply the difference between the product of the elements of the main diagonal (left to right) and the product of the elements of the diagonal from right to left. For example, given the following 2x2 matrix:

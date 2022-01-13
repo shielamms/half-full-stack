@@ -18,11 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Stack Half Full
+title: Half-Full Stack
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Optimistically learning data science
-baseurl: "/stack-half-full" # the subpath of your site, e.g. /blog
+baseurl: "/half-full-stack" # the subpath of your site, e.g. /blog
 url: "https://shielamms.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  shielamms
 
@@ -60,8 +60,8 @@ menu:
     url: /notebooks/
   # - title: 15WDS
   #   url: /data-project/
-  - title: About
-    url: /about/
+  # - title: About
+  #   url: /about/
 
 kramdown:
   math_engine:         mathjax

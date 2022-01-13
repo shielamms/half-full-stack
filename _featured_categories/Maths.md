@@ -8,6 +8,8 @@ no_groups: true
 ---
 
 ## Linear Algebra
-- **[Matrix Operations](/stack-half-full/maths/matrix-operations.html)**
+- **[Matrices and Matrix Operations]({{ "/maths/matrix-operations.html" | relative_url }})**
 
-    - Project: [Calculating the Determinant through the Laplace Expansion](/stack-half-full/maths/matrix-determinant-with-laplace-expansion) - ([Code on Github](https://github.com/shielamms/maths-for-data-science/tree/main/1_linear-algebra){:target="_blank"})
+    - Project: [Calculating the Determinant through the Laplace Expansion]({{ "/maths/matrix-determinant-with-laplace-expansion" | relative_url }}) - ([Code on Github](https://github.com/shielamms/maths-for-data-science/tree/main/1_linear-algebra){:target="_blank"})
+
+- **[Eigenvectors and Eigenvalues]({{ "/maths/eigenvectors-and-eigenvalues.html" | relative_url }})**

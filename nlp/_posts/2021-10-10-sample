@@ -1,0 +1,32 @@
+---
+layout: post
+title: Data Engineering Projects 2021
+date:   2021-10-03 12:44:38 +0100
+categories: [NLP]
+tags: [python]
+---
+
+## NLP
+- ~~Finding similar strings using Levenshtein Distance~~
+- Named Entity Recognition with SpaCy
+- Getting topics of texts using LDA
+- Twitter Sentiment Analysis with LSTM
+- Sarcasm Detector using Embeddings
+- Text summarization in Python
+    take a long corpus of text and transform into a summary
+- Next word prediction with Tensorflow
+- Correct spelling with TextBlob (Python)
+    [Reference](https://thecleverprogrammer.com/2020/11/30/correct-spellings-with-python/)
+
+
+## Data Ops
+- Bulk Route53 imports
+- A Flask App with uWSGI on Docker
+- Scrapy Scraping
+- Processing CSVs with an Apache Beam data pipeline
+- Developing Unit Tests with `pytest`
+- Simple recommender with k-nearest neighbors
+
+## Maths
+- Eigenvectors and Eigenvalues
+- Matrix Decomposition

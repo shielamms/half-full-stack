@@ -435,11 +435,13 @@ weighted avg       0.94      0.64      0.75      1416
 ```
 
 Let's start with the `False` class (lie):
+
 **Negative Precision:** *Out of all the messages we predicted were lies, how many were actually lies?* Only 6% of what we thought were lies were actually lies.
 
 **Negative Recall:** *Out of all the real lies in the validation set, how many did we catch?* Only 54% of the real lies in the validation set were caught by our model. It's a pretty low performance.
 
 Then we interpret the `True` class (truth or neutral message):
+
 **Positive Precision:** *Out of all the messages we predicted were truths/neutral, how many were actually truths/neutral?* 97% of what we thought were truths/neutral were actually truths/neutral.
 
 **Positive Recall:** *Out of all the real truths/neutral messages in the validation set, how many did we catch?* Only 64% of the real truths/neutral messages in the validation set were caught by our model.

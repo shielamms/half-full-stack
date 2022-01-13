@@ -474,7 +474,7 @@ Output:
 -9.51619735392994e-16
 ```
 
-One of the ways to calculate the determinant of a matrix is by the Laplace Expansion algorithm, which is discussed in [my mini project here](/stack-half-full/maths/matrix-determinant-with-laplace-expansion).
+One of the ways to calculate the determinant of a matrix is by the Laplace Expansion algorithm, which is discussed in [my mini project here]({{ "/maths/matrix-determinant-with-laplace-expansion" | relative_url }}).
 
 <br>
 
