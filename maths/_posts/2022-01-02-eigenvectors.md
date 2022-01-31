@@ -123,3 +123,10 @@ $$
 A - \lambda * I = 0
 \end{aligned}
 $$
+
+---
+
+## References and Further Reading:
+- [Malik, Farhad (2019). "What are Eigenvalues and Eigenvectors? A must-know concept in Machine Learning"](https://medium.com/fintechexplained/what-are-eigenvalues-and-eigenvectors-a-must-know-concept-for-machine-learning-80d0fd330e47)
+
+- [Brownlee, Jason (2021). "Basics of Linear Algebra for Machine Learning", Factorization](https://machinelearningmastery.com/linear_algebra_for_machine_learning/)
