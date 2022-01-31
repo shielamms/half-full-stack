@@ -30,18 +30,5 @@ So, a domain name can have several DNS records of different types (each type ser
 ---
 ---
 
-# Code Walkthrough
-
-From a high-level perspective, there will be four main steps (functions):
-(1) reading the CSV file from S3;
-(2) Grouping records from the file by domain name;
-(3) ...
-
-## Input format
-
-## Reading the file from S3
-
-## Grouping DNS records by domain name
-
-
-##
+## Code Walkthrough
+Under Construction! The author is still translating the code into easily digestible concepts. Stay tuned! Meanwhile, you can checkout the code yourself: **[lambda-functions/02-route53-bulk-import](https://github.com/shielamms/lambda-functions/tree/master/02-route53-bulk-import){:target="_blank"}**.

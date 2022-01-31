@@ -2,9 +2,10 @@
 layout: page
 title: Notebooks
 permalink: /notebooks/
+description: >
+    For data analysis and machine learning, I normally use **Jupyter Notebooks** and share them on Google Colab or DeepNote. Here's a bunch of Notebooks I've written while experimenting on machine learning, data wrangling, and data visualisations.
 ---
 
-For data analysis and machine learning, I normally use **Jupyter Notebooks** and share them on Google Colab or DeepNote. Here's a bunch of Notebooks I've written while experimenting on machine learning, data wrangling, and data visualisations.
 (This page is a work in progress. More notebooks to come!)
 
 <!-- ## Data Wrangling
