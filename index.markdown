@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: It's not full-stack.
+title: It's not Full Stack. It's not Half Stack.
 ---
 
 ## My Tech Stack is Half-Full.
@@ -14,7 +14,7 @@ Hi! I'm Shiela. My current job title is *Data Engineer*, but I also love learnin
 the wider field of Data Science - from maths foundations to machine learning,
 as well as the analytics, algorithms, operations, and infrastructure in between.
 This is my portfolio of personal projects related to data and its intricate web of subjects.
-*Half-Full Stack* is a reminder to take one's ignorance of an engineering topic as an opportunity to grow and learn.
+*Half-Stack Full* is a reminder to take one's ignorance of an engineering topic as an opportunity to grow and learn.
 
 ---
 

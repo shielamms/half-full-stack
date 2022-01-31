@@ -13,4 +13,4 @@ no_groups: true
 
 - [Bulk Import DNS records to Route53 with AWS Lambda]({{ "/dataops/bulk-import-dns-records-route53-lambda.html" | relative_url }}) - ([Code on Github](https://github.com/shielamms/lambda-functions/tree/master/02-route53-bulk-import){:target="_blank"})
 
-- [Productionizing a Flask app with uWSGI]({{ "/dataops/dockerized-flask-app-with-uwsgi" | relative_url }}) - ([Code on Github](){:target="_blank"})
+<!-- - [Productionizing a Flask app with uWSGI]({{ "/dataops/dockerized-flask-app-with-uwsgi" | relative_url }}) - ([Code on Github](){:target="_blank"}) -->
