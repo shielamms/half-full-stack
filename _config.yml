@@ -22,8 +22,8 @@ title: Half-Stack Full
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Optimistically learning data science
-baseurl: "/half-stack-full" # the subpath of your site, e.g. /blog
-url: "http://dev.shielasandoval.com/" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/half-stack-full" # the subpath of your site, e.g. /blog
+url: "http://dev.shielasandoval.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  shielamms
 
 # Build settings
