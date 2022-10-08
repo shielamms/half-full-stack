@@ -1,11 +1,10 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: about
+layout: page
 title: It's not Full Stack. It's not Half Stack.
-slug: dataops
+slug: about
+permalink: /about/
 menu: true
+
 ---
 
 ## My Tech Stack is Half-Full.
