@@ -50,14 +50,16 @@ collections:
     output:            true
 
 menu:
-  - title: NLP
-    url: /nlp/
   - title: Data Ops
     url: /dataops/
+  - title: NLP
+    url: /nlp/
   - title: Mathematics
     url: /maths/
   - title: Notebooks
     url: /notebooks/
+  - title: About
+    url: /about/
   # - title: 15WDS
   #   url: /data-project/
   # - title: About
