@@ -3,7 +3,8 @@ layout: page
 title: It's not Full Stack. It's not Half Stack.
 slug: about
 permalink: /about/
-menu: true
+menu: false
+published: false
 
 ---
 

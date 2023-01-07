@@ -5,7 +5,7 @@
 layout: home
 title: My Tech Stack is Half-Full.
 no_groups: true
-menu: false
+cover: true
 
 ---
 

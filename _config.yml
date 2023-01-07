@@ -50,18 +50,14 @@ collections:
     output:            true
 
 menu:
-  - title: Data Ops
-    url: /dataops/
+  - title: Data Engineering
+    url: /data-engineering/
   - title: NLP
     url: /nlp/
   - title: Mathematics
     url: /maths/
   - title: Notebooks
     url: /notebooks/
-  # - title: 15WDS
-  #   url: /data-project/
-  # - title: About
-  #   url: /about/
 
 kramdown:
   math_engine:         mathjax
