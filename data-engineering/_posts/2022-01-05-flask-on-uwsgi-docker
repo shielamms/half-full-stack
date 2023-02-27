@@ -1,0 +1,29 @@
+---
+layout: post
+title: Productionizing a Flask application with uWSGI
+slug: dockerized-flask-app-with-uwsgi
+date:   2022-01-05 21:06:08 +0000
+categories: [data-engineering]
+tags: [python, api, docker]
+---
+
+Flask is a popular Python framework for quickly writing APIs. It acts as an application server at the same time, so running APIs for local development and testing needs no further setup. However, Flask is not recommended for Production use as it can only serve one request at a time and thus not a scalable solution for Production-level traffic. A separate application server is needed to handle parallel and concurrent processing for the Flask app behind it. In this project, I've written a simple Flask app and configured an application server called **uWSGI**, which will run in Docker.
+
+[insert image here]
+
+
+---
+
+## The Code
+
+You can checkout the complete code in [this Github repository](){:target="_blank"}.
+
+### Pre-requisites
+1. Python 3
+2. Docker
+
+---
+
+# Code Walkthrough
+
+...
