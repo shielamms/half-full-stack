@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: My Tech Stack is Half-Full.
+title: My tech stack is not half-empty. It's half-full.
 no_groups: true
 cover: true
 
@@ -13,10 +13,10 @@ cover: true
 
 I'm Shiela.
 
-I'm a Data Engineer with a lot of hobbies, but I also love the wider field of Data Science - the maths, analytics, algorithms, operations, and infrastructure in between. This is my collection of articles and projects related to data and its intricate web of subjects.
+I'm a Data Engineer who loves the intricate web of Data Science topics - the maths, analytics, algorithms, operations, and infrastructure in between. I believe that data science can be so much more valuable if incorporated with engineering practices to enable robust and scalable data-centric products. This site focuses on those engineering skills that can make a more self-sufficient data scientist, or as I'd like to call them - a Half-Stack-Full Data Scientist.
 
-The world of data tech is fast-paced and ever-evolving, which can sometimes make data engineers feel frustrated with their current skills. I'd like to think that my tech stack is *half-full* - that I'm optimistically learning new things in my field everyday.
 
+---
 
 <br>
 
