@@ -162,6 +162,6 @@ Running test cases on test_square
 
 ---
 
-Wrapper functions are powerful. They can look a bit intimidating at first (a function within a function can be hard to wrap your head around..pun intended), but as your project grows and you start writing more functions, wrapper functions are a scalable way of implementing observability checks like logging and performance measures. They also help your code look tidier by removing the mud of repetitive lines of code on each of your functions. 
+Wrapper functions are powerful. They can look a bit intimidating at first (a function within a function can be hard to wrap your head around..pun intended), but as your codebase grows bigger, wrapper functions can be a scalable way of implementing observability checks like logging and performance measures. They also help your project look tidier by removing the mud of repetitive lines of code.
 
 Happy coding!
