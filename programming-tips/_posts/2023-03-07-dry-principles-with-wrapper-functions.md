@@ -3,7 +3,7 @@ layout: post
 title: Observing DRY principles with wrapper functions
 slug: dry-principles-with-wrapper-functions
 date:   2023-03-06 13:00:00 +0100
-categories: [python-tips]
+categories: [programming-tips]
 tags: [python, logging]
 ---
 

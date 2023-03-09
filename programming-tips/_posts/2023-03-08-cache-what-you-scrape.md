@@ -3,7 +3,7 @@ layout: post
 title: "Cache what you scrape: implementing a caching strategy for scraping projects"
 slug: cache-what-you-scrape
 date:   2023-03-08 13:00:00 +0100
-categories: [python-tips]
+categories: [programming-tips]
 tags: [python, scraping, caching]
 ---
 
@@ -103,7 +103,7 @@ client.server_info()
 This should print out your mongodb connection details if your connection is working normally.
 
 
-### Use a wrapper function to cache the output of a function
+## Use a wrapper function to cache the output of the scraper
 
 Recall that our IMDB Scraper class has a `scrape()` function that we can call whenever we want to re-scrape data from a website. We'd want to just retain this function as it is, and just extend it with a caching functionality. Enter **decorators**! Basically, we'd want something like the code below, where the `scrape()` function's implementation is left untouched. We then just decorate it with a wrapper function that's arbitrarily called `cache_me()`, which takes in as a parameter an arbitrary name of the cache in which to store the output of the `scrape()` function.
 
@@ -240,3 +240,6 @@ Removing cached data...
 ```
 
 ---
+
+This is just one of the many caching strategies that you can implement on your scraping projects. The advantage of using a wrapper function/decorator approach is that you can easily reuse your wrapper code on any scraper function, as well as even use different storage systems for different types of data. Your code can be easier to extend and maintain when you put flexibility in mind when building your caching strategy.
+
