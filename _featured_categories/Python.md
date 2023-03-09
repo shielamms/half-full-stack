@@ -13,3 +13,5 @@ menu: true
 **[Organise your Python environment setup]({{ "/python-tips/organise-python-environment-setup.html" | relative_url}} )**
  
 **[Observing DRY principles with wrapper functions]({{ "/python-tips/dry-principles-with-wrapper-functions.html" | relative_url}} )**
+
+**[Cache what you scrape: Implementing a caching strategy for scraping projects]({{ "/python-tips/cache-what-you-scrape.html" | relative_url}} )**
