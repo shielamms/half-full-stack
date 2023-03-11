@@ -21,7 +21,7 @@
 title: Half-Stack Full
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Engineering skills for data scientists
+  Engineering tips for data scientists
 # baseurl: "/half-stack-full" # the subpath of your site, e.g. /blog
 url: "http://dev.shielasandoval.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  shielamms
@@ -50,8 +50,10 @@ collections:
     output:            true
 
 menu:
-  - title: Programming Tips
+  - title: Python Programming
     url: /programming-tips/
+  - title: Containerisation
+    url: /containerisation/
 
 kramdown:
   math_engine:         mathjax
