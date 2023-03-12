@@ -54,6 +54,8 @@ menu:
     url: /programming-tips/
   - title: Containerisation
     url: /containerisation/
+  - title: About
+    url: /
 
 kramdown:
   math_engine:         mathjax
@@ -62,8 +64,8 @@ kramdown:
 author:
   picture:  /assets/images/author.jpg
   about: |
-    I'm a Data Engineer who productionises data pipelines
-    and ML applications into the cloud. On the side, I learn various
+    I'm a Data Engineer specialising in building and deploying data pipelines
+    and ML applications into cloud environments. On the side, I learn various
     data science topics through mini projects and online tutorials.
     Also on the side are a wide variety of hobbies and interests.
 
