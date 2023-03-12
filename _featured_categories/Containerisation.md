@@ -1,0 +1,13 @@
+---
+layout: page
+title: Containerisation
+slug: containerisation
+permalink: /containerisation/
+description: >
+  Containers make it easy to spin up your data apps. Here are some things to 
+  help you be more confident with containerised environments.
+menu: true
+
+---
+
+[Docker Compose: running containers that can talk to each other]({{ "/containerisation/guide-to-docker-compose.html" | relative_url}} )
