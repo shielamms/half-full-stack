@@ -7,23 +7,30 @@ categories: [containerisation]
 tags: [docker, docker-compose]
 ---
 
-Docker makes setting up and spinning up an application quick and painless by creating an isolated environment on your development machine. However, in most cases, and especially if you're setting up an app that needs data from an external source, you'll need to spin up multiple applications. Technically, a docker container can hold multiple applications, but you wouldn't be taking advantage of the power of docker containers in that case. You can spin up multiple containers, each one containing one application that's part of your setup. However, since docker containers are by default isolated environments, you'll need a way for the containers to communicate with each other. For this, you'll need to set up a single docker network in which to deploy your containers.
+Docker makes setting up and spinning up an application quick and painless by creating an isolated environment on your development machine. However, in most cases, and especially if you're setting up an app that needs data from an external source, you'll need to spin up multiple applications. Technically, a docker container can hold multiple applications, but you wouldn't be taking advantage of the power of docker containers in that case. You can spin up multiple containers, each one containing one application that's part of your setup. However, docker containers are by default isolated environments, so spinning up multiple containers won't necessarily allow those containers to communicate with each other.
 
-A docker network can easily be created via the Docker CLI:
+![Docker Multicontainer]({{site.baseurl}}/assets/images/docker-compose-drawings/docker-without-single-network.png){: width="640" loading="lazy" style="margin-bottom: 1em"}
+
+For this, you'll need to set up a single docker network in which to deploy your containers. A docker network can easily be created via the Docker CLI:
 ```
 docker network create <network-name>
 ```
+
+![Docker Multicontainer Network]({{site.baseurl}}/assets/images/docker-compose-drawings/docker-compose-network.png){: width="640" loading="lazy" style="margin-bottom: 1em"}
+
 You can then build and run containers into the network that you've just created. However, you can end up running a lot of docker commands the more containers you have to spin up, and sometimes it can be easy to forget to configure a new container into the network. This is where **`docker-compose`** comes in handy - you can describe your containers and networking needs through a `docker-compose.yml` file and docker compose takes care of configuring and running your containers for you.
 
-All code in this article are in [this Github repository](https://github.com/shielamms/ds-ml-web-apps/tree/main/docker-compose-demo).
+> **docker-compose?** is a tool that lets you automate the workflow of running, connecting, and tearing down multiple docker containers. This is done by describing your containerised environment in a `docker-compose.yml` file, and with a single command, docker-compose can spin up or tear down your containers. 
 
 ---
 
 ## A sample multi-container setup
 
+All code in this article are in [this Github repository](https://github.com/shielamms/ds-ml-web-apps/tree/main/docker-compose-demo).
+
 To demonstrate how to set up a docker network to enable communication between multiple containers, let's take a look at the following app setup. We have a sample app that needs to read and write data from/to a redis cache. The app (in this case, a simple Flask API) is in one container, and the redis instance is in another container. We need to enable communication between the two containers while also allowing users to make API calls to the app.
 
-![DockerComposeDefinition]({{site.baseurl}}/assets/images/docker-compose-definition.png){: width="640" loading="lazy" style="margin-left: 1em; margin-bottom: 1em"}
+![DockerComposeDefinition]({{site.baseurl}}/assets/images/docker-compose-drawings/docker-compose-definition.png){: width="640" loading="lazy" style="margin-left: 1em; margin-bottom: 1em"}
 
 Both app containers need to be in the same docker network. We expose port 6379 on the redis container so that it can be reached by other apps for data inserts and reads. Then, we expose the API container's port 5001, which will be the entrypoint for API calls from outside of the docker network. 
 
@@ -196,5 +203,3 @@ curl localhost:5000/retrieve/test
 ---
 
 In this primer to docker-compose, we spun up a containerised application composed of a database (redis) and a custom app (Flask API), wherein the custom app is able to reach the database due to them being in the same docker network. The [docker-compose documentation](https://docs.docker.com/compose/compose-file/#volumes-top-level-element) provides more granular details and several more options and elements to configure your docker setup. As your containerised architecture grows, it pays very well to have docker-compose to automate the otherwise mundane and error-prone manual way of running several docker commands.
-
----
