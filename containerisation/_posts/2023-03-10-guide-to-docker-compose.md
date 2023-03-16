@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Docker Compose: running containers that can talk to each other"
+title: "Running multiple containers that can communicate with each other"
 slug: guide-to-docker-compose
 date:   2023-03-10 15:00:00 +0000
 categories: [containerisation]
@@ -20,7 +20,7 @@ docker network create <network-name>
 
 You can then build and run containers into the network that you've just created. However, you can end up running a lot of docker commands the more containers you have to spin up, and sometimes it can be easy to forget to configure a new container into the network. This is where **`docker-compose`** comes in handy - you can describe your containers and networking needs through a `docker-compose.yml` file and docker compose takes care of configuring and running your containers for you.
 
-> **docker-compose?** is a tool that lets you automate the workflow of running, connecting, and tearing down multiple docker containers. This is done by describing your containerised environment in a `docker-compose.yml` file, and with a single command, docker-compose can spin up or tear down your containers. 
+> **docker-compose** is a tool that lets you automate the workflow of running, connecting, and tearing down multiple docker containers. This is done by describing your containerised environment in a `docker-compose.yml` file, and with a single command, docker-compose can spin up or tear down your containers. 
 
 ---
 
@@ -32,7 +32,7 @@ To demonstrate how to set up a docker network to enable communication between mu
 
 ![DockerComposeDefinition]({{site.baseurl}}/assets/images/docker-compose-drawings/docker-compose-definition.png){: width="640" loading="lazy" style="margin-left: 1em; margin-bottom: 1em"}
 
-Both app containers need to be in the same docker network. We expose port 6379 on the redis container so that it can be reached by other apps for data inserts and reads. Then, we expose the API container's port 5001, which will be the entrypoint for API calls from outside of the docker network. 
+Both app containers need to be in the same docker network. We expose port 6379 on the redis container so that it can be reached by other apps for data inserts and reads. Then, we expose the API container's port 5000, which will be the entrypoint for API calls from outside of the docker network. 
 
 The redis container is run from an image that's available from docker hub. Meanwhile, the API container is spun up from a custom image that we need to build via a local Dockerfile.
 
