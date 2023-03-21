@@ -13,6 +13,8 @@ Tracking changes to the data from target websites for scraping can be tricky, es
 
 A "cache", in this case, can be any form of storage - a file, a database, an object bucket, etc. Document-based NoSQL databases are a popular option, as each scraped item can easily be represented as a document, and reading/writing data doesn't need to follow any relational constraints. For this example, we'll use MongoDB as our cache storage.
 
+All the code in this article can be found in [this Github Gist](https://gist.github.com/shielamms/4eb86b1e4d2f105e2978f706f6697faf).
+
 ## Sample scraper: IMDB Top Ranked Movies
 
 Let's say you've implemented a scraper class to scrape top movies data from the IMDB website. You're using the BeautifulSoup library to extract the title and rating of each movie on the list. You'll probably have something like this:
