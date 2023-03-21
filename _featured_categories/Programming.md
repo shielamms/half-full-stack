@@ -14,6 +14,9 @@ menu: true
 
 [Organise your Python environment setup]({{ "/programming-tips/organise-python-environment-setup.html" | relative_url}} )
 
+[Setting up Pyspark in Jupyter through Homebrew]({{ "/programming-tips/pyspark-jupyter-on-mac-m1.html" | relative_url}} )
+
+---
 
 ### _Avoiding unnecessarily repetitive code_
 
