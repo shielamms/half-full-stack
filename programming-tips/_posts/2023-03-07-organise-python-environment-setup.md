@@ -4,7 +4,7 @@ title: Organise your Python Environment Setup
 slug: organise-python-environment-setup
 date:   2023-03-06 13:00:00 +0100
 categories: [programming-tips]
-tags: [python]
+tags: [python, mac]
 ---
 
 Ok, so you probably have a new development machine. And you also probably want to set up a Python environment so you can start coding right away. Chances are that you already have a bunch of python projects in some repository somewhere and want to check them out and run them on your new machine. For that, you'll need to setup your python tools correctly from the start so you can just easily switch between your projects without much repetition. I often use a two-step setup consisting of a python version manager and a virtual environment manager - and that's pretty much all I need to get started. This is how I would normally start my python setup in a new local machine. I tend to install more lightweight software than all-in-one packages just so I have a feeling of control over the resources I use and I could understand the basic steps better.
