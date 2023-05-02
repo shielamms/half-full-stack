@@ -26,7 +26,7 @@ You can then build and run containers into the network that you've just created.
 
 ## A sample multi-container setup
 
-All code in this article are in [this Github repository](https://github.com/shielamms/ds-ml-web-apps/tree/main/docker-compose-demo).
+All code in this article are in [this Github repository](https://github.com/shielamms/docker-demos/tree/main/docker-networks-demo).
 
 To demonstrate how to set up a docker network to enable communication between multiple containers, let's take a look at the following app setup. We have a sample app that needs to read and write data from/to a redis cache. The app (in this case, a simple Flask API) is in one container, and the redis instance is in another container. We need to enable communication between the two containers while also allowing users to make API calls to the app.
 

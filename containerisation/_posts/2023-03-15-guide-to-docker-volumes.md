@@ -11,7 +11,7 @@ In the [previous docker-compose blog post](http://dev.shielasandoval.com/contain
 
 Let's take a look at a scenario involving two apps (in separate containers). The first app writes data into a file, while the second app needs to read data from the same file.
 
-All code in this article are in **[this Github repository](https://github.com/shielamms/ds-ml-web-apps/tree/main/docker-volumes-demo)**.
+All code in this article are in **[this Github repository](https://github.com/shielamms/docker-demos/tree/main/docker-volumes-demo)**.
 
 ## Use Case: containers that need to access the same files
 
