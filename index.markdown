@@ -13,7 +13,7 @@ cover: true
 
 # It's half-full.
 
-I'm Shiela. I'm a Data & ML Engineer who loves the intricate web of Data Science topics - the maths, algorithms, operations, and infrastructure in between. I believe that data science can be so much more valuable if combined with conventional engineering practices to enable robust data-centric products. This site focuses on those engineering skills that can make a more self-sufficient data scientist, or as I'd like to call them - a **Half-Stack-Full Data Scientist**.
+I'm a Data & ML Engineer who loves the intricate web of Data Science topics - the maths, algorithms, operations, and infrastructure in between. I believe that data science can be so much more valuable if combined with conventional engineering practices for reproducability, portability, security, and many more. This site focuses on those engineering skills that can make a more self-sufficient data scientist, or as I'd like to call them - a **Half-Stack-Full Data Scientist**.
 
 ---
 
