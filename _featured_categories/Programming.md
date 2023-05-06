@@ -10,7 +10,7 @@ menu: true
 
 ---
 
-### _Managing your environments_
+### _Managing environments_
 
 [Organise your Python environment setup]({{ "/programming-tips/organise-python-environment-setup.html" | relative_url}} )
 
@@ -23,3 +23,9 @@ menu: true
 [Observing DRY principles with wrapper functions]({{ "/programming-tips/dry-principles-with-wrapper-functions.html" | relative_url}} )
 
 [Cache what you scrape: Implementing a caching strategy for scraping projects]({{ "/programming-tips/cache-what-you-scrape.html" | relative_url}} )
+
+---
+
+### _Observability practices_
+
+[Understanding the why and how of Python application logging]({{ "/programming-tips/python-logging.html" | relative_url}} )
