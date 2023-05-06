@@ -64,11 +64,9 @@ kramdown:
 author:
   picture:  /assets/images/author.jpg
   about: |
-    I'm a Data Engineer who builds and deploys data pipelines and ML apps
-    into cloud environments. As somone on the intersection of data professions,
-    I have a firm believe that strong foundational skills in software
-    engineering makes a highly effective data team.
-
+    I'm a Data and ML Engineer specialising in deploying data pipelines, apps,
+    models, and infrastructure into cloud environments. Let's connect on
+    [LinkedIn](https://www.linkedin.com/in/shiela-mms/)!
 
 
 # Exclude from processing.
